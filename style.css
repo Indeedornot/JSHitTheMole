@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.mole {
+    display: none;
+}
+
+/*.changeColor{*/
+/*    background-color: #f5f5f5;*/
+/*    animation: colorChange 500ms linear infinite;*/
+/*}*/
+
+/*@keyframes colorChange {*/
+/*    0%{*/
+/*        background-color: var(--bs-gray-dark);*/
+/*    }*/
+/*    100%{*/
+/*        background-color: var(--bs-light);*/
+/*    }*/
+/*}*/
+
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5% 5%;
+    grid-template-areas:
+    "seven eight nine"
+    "four five six"
+    "one two three";
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+/*overlay it as to not disturb the game*/
+#score {
+    text-align: right;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    font-family: monospace;
+    font-size: 25px;
+    pointer-events: none;
+    user-select: none;
+}
+
+#timer {
+    text-align: left;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    font-family: monospace;
+    font-size: 25px;
+    pointer-events: none;
+    user-select: none;
+}
